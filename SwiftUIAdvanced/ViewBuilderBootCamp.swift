@@ -62,6 +62,20 @@ struct HeaderViewGeneric<Content:View>: View {
     }
 }
 
+struct CustomHStack<Content: View>: View {
+    let content: Content
+
+    init(@ViewBuilder content: () -> Content) {
+        self.content = content()
+    }
+
+    var body: some View {
+        HStack {
+            content
+        }
+    }
+}
+
 struct ViewBuilderBootCamp: View {
     var body: some View {
         VStack {
@@ -81,6 +95,12 @@ struct ViewBuilderBootCamp: View {
                     Image(systemName: "heart.fill")
                 }
 
+            }
+
+            CustomHStack {
+                Text("hello")
+                Text("hello")
+                Text("hello")
             }
 
 
