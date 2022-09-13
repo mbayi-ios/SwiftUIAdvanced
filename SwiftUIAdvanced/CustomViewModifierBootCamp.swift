@@ -40,7 +40,6 @@ struct CustomViewModifierBootCamp: View {
             Text("Hello World")
                 .withDefaultButtonFormatting(backgroundColor: .yellow) // using view extension to work like .font()
 
-
             Text("Hello World")
                 .font(.headline)
                 .foregroundColor(.white)

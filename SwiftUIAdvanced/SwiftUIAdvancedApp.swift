@@ -11,7 +11,8 @@ import SwiftUI
 struct SwiftUIAdvancedApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //AnyTransitionBootCamp()
+            MatchedGoemetryEffectExample2()
         }
     }
 }
