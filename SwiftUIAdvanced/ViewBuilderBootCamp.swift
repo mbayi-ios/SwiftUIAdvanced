@@ -11,6 +11,7 @@ import SwiftUI
 struct HeaderViewRegular: View {
     let title: String
     let description: String?
+    let iconName: String?
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -21,6 +22,10 @@ struct HeaderViewRegular: View {
             if let description = description {
                 Text("description")
                     .font(.callout)
+            }
+
+            if let iconName = iconName {
+                Image(systemName: iconName)
             }
 
 
@@ -37,8 +42,8 @@ struct HeaderViewRegular: View {
 struct ViewBuilderBootCamp: View {
     var body: some View {
         VStack {
-            HeaderViewRegular(title: "Title One", description: "hello")
-            HeaderViewRegular(title: "Title One", description: nil)
+            HeaderViewRegular(title: "Title One", description: "hello", iconName: "heart.fill")
+            HeaderViewRegular(title: "Title One", description: nil, iconName: nil)
             Spacer()
         }
 
