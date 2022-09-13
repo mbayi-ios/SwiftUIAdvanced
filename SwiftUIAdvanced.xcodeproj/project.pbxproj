@@ -16,6 +16,7 @@
 		89AB0CE528CA90D5009C6D56 /* AnyTransitionBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AB0CE428CA90D5009C6D56 /* AnyTransitionBootCamp.swift */; };
 		89C5C27628D0F16C0010EB5E /* MatchedGeometryEffectBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C5C27528D0F16C0010EB5E /* MatchedGeometryEffectBootCamp.swift */; };
 		89C5C27828D0F80E0010EB5E /* GenericsBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C5C27728D0F80E0010EB5E /* GenericsBootCamp.swift */; };
+		89C5C27A28D101E80010EB5E /* ViewBuilderBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C5C27928D101E80010EB5E /* ViewBuilderBootCamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		89AB0CE428CA90D5009C6D56 /* AnyTransitionBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransitionBootCamp.swift; sourceTree = "<group>"; };
 		89C5C27528D0F16C0010EB5E /* MatchedGeometryEffectBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedGeometryEffectBootCamp.swift; sourceTree = "<group>"; };
 		89C5C27728D0F80E0010EB5E /* GenericsBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericsBootCamp.swift; sourceTree = "<group>"; };
+		89C5C27928D101E80010EB5E /* ViewBuilderBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilderBootCamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				896FB1E528AEC768004C691F /* Preview Content */,
 				89AB0CE028CA88ED009C6D56 /* CustomViewModifierBootCamp.swift */,
 				89C5C27528D0F16C0010EB5E /* MatchedGeometryEffectBootCamp.swift */,
+				89C5C27928D101E80010EB5E /* ViewBuilderBootCamp.swift */,
 				89AB0CE228CA8D10009C6D56 /* ButtonStyleBootCamp.swift */,
 				89C5C27728D0F80E0010EB5E /* GenericsBootCamp.swift */,
 				89AB0CE428CA90D5009C6D56 /* AnyTransitionBootCamp.swift */,
@@ -155,6 +158,7 @@
 				89C5C27628D0F16C0010EB5E /* MatchedGeometryEffectBootCamp.swift in Sources */,
 				896FB1E228AEC765004C691F /* ContentView.swift in Sources */,
 				896FB1E028AEC765004C691F /* SwiftUIAdvancedApp.swift in Sources */,
+				89C5C27A28D101E80010EB5E /* ViewBuilderBootCamp.swift in Sources */,
 				89AB0CE528CA90D5009C6D56 /* AnyTransitionBootCamp.swift in Sources */,
 				89AB0CE328CA8D10009C6D56 /* ButtonStyleBootCamp.swift in Sources */,
 				89AB0CE128CA88ED009C6D56 /* CustomViewModifierBootCamp.swift in Sources */,
