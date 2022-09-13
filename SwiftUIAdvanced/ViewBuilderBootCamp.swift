@@ -112,6 +112,49 @@ struct ViewBuilderBootCamp: View {
 
 struct ViewBuilderBootCamp_Previews: PreviewProvider {
     static var previews: some View {
-        ViewBuilderBootCamp()
+        LocalViewBuilder(type: .two)
+    }
+}
+
+
+struct LocalViewBuilder: View {
+
+    enum ViewType {
+        case one, two, three
+    }
+
+    let type: ViewType
+
+    var body: some View {
+        VStack {
+            headerSection
+        }
+    }
+
+    @ViewBuilder private var headerSection: some View {
+        if type == .one {
+            viewOne
+
+        } else if type == .two {
+            viewTwo
+
+        } else if type == .three {
+            viewThree
+        }
+    }
+
+    private var viewOne: some View {
+        Text("one")
+    }
+    private var viewTwo: some View {
+
+        VStack {
+            Text("two and")
+            Image(systemName: "heart.fill")
+        }
+    }
+    private var viewThree: some View {
+        Image(systemName: "heart.fill")
+
     }
 }
