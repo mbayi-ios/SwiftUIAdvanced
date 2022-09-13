@@ -28,7 +28,6 @@ struct HeaderViewRegular: View {
                 Image(systemName: iconName)
             }
 
-
             RoundedRectangle(cornerRadius: 5)
                 .frame(height: 2)
         }
@@ -36,7 +35,31 @@ struct HeaderViewRegular: View {
         .padding()
     }
 
+}
 
+struct HeaderViewGeneric<Content:View>: View {
+    let title: String
+    let content: Content
+
+    init(title: String, @ViewBuilder content: () -> Content) {
+        self.title = title
+        self.content = content()
+    }
+
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text(title)
+                .font(.largeTitle)
+                .fontWeight(.semibold)
+
+            content
+
+            RoundedRectangle(cornerRadius: 5)
+                .frame(height: 2)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding()
+    }
 }
 
 struct ViewBuilderBootCamp: View {
@@ -44,6 +67,23 @@ struct ViewBuilderBootCamp: View {
         VStack {
             HeaderViewRegular(title: "Title One", description: "hello", iconName: "heart.fill")
             HeaderViewRegular(title: "Title One", description: nil, iconName: nil)
+
+            Divider()
+            //
+            //            HeaderViewGeneric(title: "Generic Title", content: Text("hello"))
+            //
+            //            HeaderViewGeneric(title: "generic 2", content: Image(systemName: "heart.fill"))
+
+            HeaderViewGeneric(title: "Generic Title") {
+
+                HStack {
+                    Text("Hi View Builder")
+                    Image(systemName: "heart.fill")
+                }
+
+            }
+
+
             Spacer()
         }
 
