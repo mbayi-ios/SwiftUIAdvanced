@@ -48,11 +48,25 @@ class GenericsViewModel: ObservableObject {
     }
 }
 
+
+//creating a generic view and passing it to another View
+struct GenericView<CustomType:View>: View {
+    let content: CustomType
+    let title: String
+
+    var body: some View {
+        content
+    }
+}
+
+
 struct GenericsBootCamp: View {
     @StateObject private var vm = GenericsViewModel()
 
     var body: some View {
         VStack {
+            GenericView(content: Text("Hello generic View"), title: "hello GV")
+
             Text(vm.stringModel.info ?? "not data")
             Text(vm.boolModel.info?.description ?? "no data")
 
@@ -71,3 +85,4 @@ struct GenericsBootCamp_Previews: PreviewProvider {
         GenericsBootCamp()
     }
 }
+
