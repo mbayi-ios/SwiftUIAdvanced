@@ -7,6 +7,14 @@
 
 import SwiftUI
 
+/*
+ we are going to use
+ - generics
+ - View Builder
+ - PreferenceKey
+ - matchedGeometryEffect
+ */
+
 struct AppTabBarView: View {
     @State private var selection: String = "home"
     var body: some View {
