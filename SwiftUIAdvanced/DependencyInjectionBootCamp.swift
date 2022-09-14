@@ -22,12 +22,9 @@ struct PostsModel: Identifiable, Codable {
     let body: String
 }
 
-
-
 protocol DataServiceProtocol {
     func getData() -> AnyPublisher<[PostsModel], Error>
 }
-
 
 class ProductionDataService: DataServiceProtocol {
     //static let instance = ProductionDataService() // singleton
@@ -51,20 +48,30 @@ class ProductionDataService: DataServiceProtocol {
 
 class MockDataService: DataServiceProtocol {
 
-    let testData: [PostsModel] = [
-        PostsModel(userId: 1, id: 1, title: "title", body: "Body"),
-        PostsModel(userId: 2, id: 2, title: "title 2", body: "body 2")
-    ]
+    let testData: [PostsModel]
+
+    init(data: [PostsModel]?) {
+        self.testData = data ?? [
+            PostsModel(userId: 1, id: 1, title: "one", body: "one"),
+            PostsModel(userId: 2, id: 2, title: "Two", body: "Two")
+        ]
+    }
 
     func getData() -> AnyPublisher<[PostsModel], Error> {
         Just(testData)
             .tryMap({ $0 })
             .eraseToAnyPublisher()
     }
-
-
 }
 
+// incase you have multiple dependencies, you can have them in one class
+class Dependencies {
+    let dataService: DataServiceProtocol
+
+    init(dataService: DataServiceProtocol) {
+        self.dataService = dataService
+    }
+}
 
 class DependencyInjectionViewModel: ObservableObject {
     @Published var dataArray: [PostsModel] = []
@@ -111,7 +118,11 @@ struct DependencyInjectionBootCamp: View {
 struct DependencyInjectionBootCamp_Previews: PreviewProvider {
 //    static let dataService = ProductionDataService(url: URL(string: "https://jsonplaceholder.typicode.com/posts")!)
 
-    static let dataService = MockDataService()
+    //static let dataService = MockDataService(data: nil)
+
+    static let dataService = MockDataService(data: [
+        PostsModel(userId: 123, id: 123, title: "test", body: "test")
+    ])
     static var previews: some View {
         DependencyInjectionBootCamp(dataService: dataService)
     }
