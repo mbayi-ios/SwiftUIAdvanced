@@ -14,8 +14,6 @@ struct PreferenceKeyBootCamp: View {
             VStack {
                 SecondaryScreen(text: text)
                     .navigationTitle("Navigation Title")
-                    .customTitle(text: "New Value!!")
-
             }
 
         }
@@ -26,7 +24,7 @@ struct PreferenceKeyBootCamp: View {
 }
 
 extension View {
-    func customTitle(text: String) -> some View {
+    func customTitle(_ text: String) -> some View {
         self
             .preference(key: CustomTitlePreferenceKey.self, value: text)
     }
@@ -41,9 +39,17 @@ struct PreferenceKeyBootCamp_Previews: PreviewProvider {
 
 struct SecondaryScreen: View {
     let text: String
+    @State private var newValue: String = ""
     var body: some View {
         Text(text)
-            .preference(key: CustomTitlePreferenceKey.self, value: "New Value")
+            .onAppear(perform: getDataFromDataBase)
+            .customTitle(newValue)
+    }
+
+    func getDataFromDataBase() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.newValue = "NEW VALUE FROM DATABASE"
+        }
     }
 }
 
