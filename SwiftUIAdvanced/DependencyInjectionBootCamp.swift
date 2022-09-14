@@ -27,7 +27,13 @@ struct PostsModel: Identifiable, Codable {
 class ProductionDataService {
     //static let instance = ProductionDataService() // singleton
 
-    let url: URL = URL(string: "https://jsonplaceholder.typicode.com/posts")!
+    let url: URL
+
+    init(url: URL) {
+        self.url = url
+    }
+
+    //let url: URL = URL(string: "https://jsonplaceholder.typicode.com/posts")!
 
     func getData() -> AnyPublisher<[PostsModel], Error> {
         URLSession.shared.dataTaskPublisher(for: url)
@@ -82,7 +88,7 @@ struct DependencyInjectionBootCamp: View {
 }
 
 struct DependencyInjectionBootCamp_Previews: PreviewProvider {
-    static let dataService = ProductionDataService()
+    static let dataService = ProductionDataService(url: URL(string: "https://jsonplaceholder.typicode.com/posts")!)
     static var previews: some View {
         DependencyInjectionBootCamp(dataService: dataService)
     }
