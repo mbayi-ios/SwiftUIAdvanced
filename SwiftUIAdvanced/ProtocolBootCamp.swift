@@ -75,9 +75,6 @@ struct ProtocolBootCamp: View {
                 .padding()
                 .background(colorTheme.primary)
                 .cornerRadius(10)
-                .onTapGesture {
-                    dataSource.buttonPressed()
-                }
         }
 
     }

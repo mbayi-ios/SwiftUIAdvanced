@@ -20,6 +20,7 @@
 		89ADE34C28D22C93008608D3 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ADE34B28D22C93008608D3 /* CustomTabBarView.swift */; };
 		89ADE34E28D2308E008608D3 /* CustomTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ADE34D28D2308E008608D3 /* CustomTabBarContainerView.swift */; };
 		89ADE35028D238E9008608D3 /* ProtocolBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ADE34F28D238E9008608D3 /* ProtocolBootCamp.swift */; };
+		89ADE35228D24545008608D3 /* DependencyInjectionBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ADE35128D24545008608D3 /* DependencyInjectionBootCamp.swift */; };
 		89C5C27628D0F16C0010EB5E /* MatchedGeometryEffectBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C5C27528D0F16C0010EB5E /* MatchedGeometryEffectBootCamp.swift */; };
 		89C5C27828D0F80E0010EB5E /* GenericsBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C5C27728D0F80E0010EB5E /* GenericsBootCamp.swift */; };
 		89C5C27A28D101E80010EB5E /* ViewBuilderBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C5C27928D101E80010EB5E /* ViewBuilderBootCamp.swift */; };
@@ -41,6 +42,7 @@
 		89ADE34B28D22C93008608D3 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 		89ADE34D28D2308E008608D3 /* CustomTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarContainerView.swift; sourceTree = "<group>"; };
 		89ADE34F28D238E9008608D3 /* ProtocolBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolBootCamp.swift; sourceTree = "<group>"; };
+		89ADE35128D24545008608D3 /* DependencyInjectionBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionBootCamp.swift; sourceTree = "<group>"; };
 		89C5C27528D0F16C0010EB5E /* MatchedGeometryEffectBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedGeometryEffectBootCamp.swift; sourceTree = "<group>"; };
 		89C5C27728D0F80E0010EB5E /* GenericsBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericsBootCamp.swift; sourceTree = "<group>"; };
 		89C5C27928D101E80010EB5E /* ViewBuilderBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilderBootCamp.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				89C5C27728D0F80E0010EB5E /* GenericsBootCamp.swift */,
 				89AB0CE428CA90D5009C6D56 /* AnyTransitionBootCamp.swift */,
 				89ADE34F28D238E9008608D3 /* ProtocolBootCamp.swift */,
+				89ADE35128D24545008608D3 /* DependencyInjectionBootCamp.swift */,
 				89ADE34828D22AE6008608D3 /* CustomTabBar */,
 				89ADE34328D21EBE008608D3 /* PreferenceKeyBootCamp */,
 			);
@@ -201,6 +204,7 @@
 				89C5C27C28D11EFE0010EB5E /* PreferenceKeyBootCamp.swift in Sources */,
 				89AB0CE528CA90D5009C6D56 /* AnyTransitionBootCamp.swift in Sources */,
 				89AB0CE328CA8D10009C6D56 /* ButtonStyleBootCamp.swift in Sources */,
+				89ADE35228D24545008608D3 /* DependencyInjectionBootCamp.swift in Sources */,
 				89ADE34C28D22C93008608D3 /* CustomTabBarView.swift in Sources */,
 				89AB0CE128CA88ED009C6D56 /* CustomViewModifierBootCamp.swift in Sources */,
 				89C5C27828D0F80E0010EB5E /* GenericsBootCamp.swift in Sources */,
