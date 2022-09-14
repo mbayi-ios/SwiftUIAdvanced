@@ -14,6 +14,9 @@
 		89AB0CE128CA88ED009C6D56 /* CustomViewModifierBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AB0CE028CA88ED009C6D56 /* CustomViewModifierBootCamp.swift */; };
 		89AB0CE328CA8D10009C6D56 /* ButtonStyleBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AB0CE228CA8D10009C6D56 /* ButtonStyleBootCamp.swift */; };
 		89AB0CE528CA90D5009C6D56 /* AnyTransitionBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AB0CE428CA90D5009C6D56 /* AnyTransitionBootCamp.swift */; };
+		89ADE34528D21EE5008608D3 /* GeometryPreferenceKeyBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ADE34428D21EE5008608D3 /* GeometryPreferenceKeyBootCamp.swift */; };
+		89ADE34728D2212A008608D3 /* ScrollViewOffsetPreferenceKeyBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ADE34628D2212A008608D3 /* ScrollViewOffsetPreferenceKeyBootCamp.swift */; };
+		89ADE34A28D22B02008608D3 /* AppTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ADE34928D22B02008608D3 /* AppTabBarView.swift */; };
 		89C5C27628D0F16C0010EB5E /* MatchedGeometryEffectBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C5C27528D0F16C0010EB5E /* MatchedGeometryEffectBootCamp.swift */; };
 		89C5C27828D0F80E0010EB5E /* GenericsBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C5C27728D0F80E0010EB5E /* GenericsBootCamp.swift */; };
 		89C5C27A28D101E80010EB5E /* ViewBuilderBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C5C27928D101E80010EB5E /* ViewBuilderBootCamp.swift */; };
@@ -29,6 +32,9 @@
 		89AB0CE028CA88ED009C6D56 /* CustomViewModifierBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewModifierBootCamp.swift; sourceTree = "<group>"; };
 		89AB0CE228CA8D10009C6D56 /* ButtonStyleBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleBootCamp.swift; sourceTree = "<group>"; };
 		89AB0CE428CA90D5009C6D56 /* AnyTransitionBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransitionBootCamp.swift; sourceTree = "<group>"; };
+		89ADE34428D21EE5008608D3 /* GeometryPreferenceKeyBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryPreferenceKeyBootCamp.swift; sourceTree = "<group>"; };
+		89ADE34628D2212A008608D3 /* ScrollViewOffsetPreferenceKeyBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewOffsetPreferenceKeyBootCamp.swift; sourceTree = "<group>"; };
+		89ADE34928D22B02008608D3 /* AppTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarView.swift; sourceTree = "<group>"; };
 		89C5C27528D0F16C0010EB5E /* MatchedGeometryEffectBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedGeometryEffectBootCamp.swift; sourceTree = "<group>"; };
 		89C5C27728D0F80E0010EB5E /* GenericsBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericsBootCamp.swift; sourceTree = "<group>"; };
 		89C5C27928D101E80010EB5E /* ViewBuilderBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilderBootCamp.swift; sourceTree = "<group>"; };
@@ -74,8 +80,9 @@
 				89C5C27928D101E80010EB5E /* ViewBuilderBootCamp.swift */,
 				89AB0CE228CA8D10009C6D56 /* ButtonStyleBootCamp.swift */,
 				89C5C27728D0F80E0010EB5E /* GenericsBootCamp.swift */,
-				89C5C27B28D11EFE0010EB5E /* PreferenceKeyBootCamp.swift */,
 				89AB0CE428CA90D5009C6D56 /* AnyTransitionBootCamp.swift */,
+				89ADE34828D22AE6008608D3 /* CustomTabBar */,
+				89ADE34328D21EBE008608D3 /* PreferenceKeyBootCamp */,
 			);
 			path = SwiftUIAdvanced;
 			sourceTree = "<group>";
@@ -86,6 +93,24 @@
 				896FB1E628AEC768004C691F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		89ADE34328D21EBE008608D3 /* PreferenceKeyBootCamp */ = {
+			isa = PBXGroup;
+			children = (
+				89C5C27B28D11EFE0010EB5E /* PreferenceKeyBootCamp.swift */,
+				89ADE34428D21EE5008608D3 /* GeometryPreferenceKeyBootCamp.swift */,
+				89ADE34628D2212A008608D3 /* ScrollViewOffsetPreferenceKeyBootCamp.swift */,
+			);
+			path = PreferenceKeyBootCamp;
+			sourceTree = "<group>";
+		};
+		89ADE34828D22AE6008608D3 /* CustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				89ADE34928D22B02008608D3 /* AppTabBarView.swift */,
+			);
+			path = CustomTabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,7 +183,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89ADE34728D2212A008608D3 /* ScrollViewOffsetPreferenceKeyBootCamp.swift in Sources */,
 				89C5C27628D0F16C0010EB5E /* MatchedGeometryEffectBootCamp.swift in Sources */,
+				89ADE34A28D22B02008608D3 /* AppTabBarView.swift in Sources */,
 				896FB1E228AEC765004C691F /* ContentView.swift in Sources */,
 				896FB1E028AEC765004C691F /* SwiftUIAdvancedApp.swift in Sources */,
 				89C5C27A28D101E80010EB5E /* ViewBuilderBootCamp.swift in Sources */,
@@ -167,6 +194,7 @@
 				89AB0CE328CA8D10009C6D56 /* ButtonStyleBootCamp.swift in Sources */,
 				89AB0CE128CA88ED009C6D56 /* CustomViewModifierBootCamp.swift in Sources */,
 				89C5C27828D0F80E0010EB5E /* GenericsBootCamp.swift in Sources */,
+				89ADE34528D21EE5008608D3 /* GeometryPreferenceKeyBootCamp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
