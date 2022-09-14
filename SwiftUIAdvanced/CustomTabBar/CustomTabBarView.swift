@@ -11,7 +11,7 @@ struct CustomTabBarView: View {
 
     let tabs: [TabBarItem]
 
-    @State var selection: TabBarItem = TabBarItem(iconName: "heart", title: "Favorite", color: Color.blue)
+    @Binding var selection: TabBarItem
 
     var body: some View {
         HStack {
@@ -36,7 +36,7 @@ struct CustomTabBarView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             Spacer()
-            CustomTabBarView(tabs: tabs)
+            CustomTabBarView(tabs: tabs, selection: .constant(tabs.first!))
         }
     }
 }
