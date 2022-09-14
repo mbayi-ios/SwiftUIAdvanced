@@ -11,7 +11,7 @@ import Combine
 // problem with singletons
 // 1. They are global - you can access it from anywhere
 // 2. We cant customize the init
-// 3. we cant swap out services
+// 3. we cant swap out dependencies
 
 // - the solution to not using singleton is to use DI
 
@@ -22,9 +22,14 @@ struct PostsModel: Identifiable, Codable {
     let body: String
 }
 
-//
 
-class ProductionDataService {
+
+protocol DataServiceProtocol {
+    func getData() -> AnyPublisher<[PostsModel], Error>
+}
+
+
+class ProductionDataService: DataServiceProtocol {
     //static let instance = ProductionDataService() // singleton
 
     let url: URL
@@ -44,14 +49,30 @@ class ProductionDataService {
     }
 }
 
+class MockDataService: DataServiceProtocol {
+
+    let testData: [PostsModel] = [
+        PostsModel(userId: 1, id: 1, title: "title", body: "Body"),
+        PostsModel(userId: 2, id: 2, title: "title 2", body: "body 2")
+    ]
+
+    func getData() -> AnyPublisher<[PostsModel], Error> {
+        Just(testData)
+            .tryMap({ $0 })
+            .eraseToAnyPublisher()
+    }
+
+
+}
+
 
 class DependencyInjectionViewModel: ObservableObject {
     @Published var dataArray: [PostsModel] = []
     var cancellables = Set<AnyCancellable>()
 
-    let dataService: ProductionDataService
+    let dataService: DataServiceProtocol
 
-    init(dataService: ProductionDataService) {
+    init(dataService: DataServiceProtocol) {
         self.dataService = dataService
         loadPosts()
     }
@@ -72,7 +93,7 @@ struct DependencyInjectionBootCamp: View {
 
     @StateObject private var vm: DependencyInjectionViewModel
 
-    init(dataService: ProductionDataService) {
+    init(dataService: DataServiceProtocol) {
         _vm = StateObject(wrappedValue: DependencyInjectionViewModel(dataService: dataService))
     }
 
@@ -88,7 +109,9 @@ struct DependencyInjectionBootCamp: View {
 }
 
 struct DependencyInjectionBootCamp_Previews: PreviewProvider {
-    static let dataService = ProductionDataService(url: URL(string: "https://jsonplaceholder.typicode.com/posts")!)
+//    static let dataService = ProductionDataService(url: URL(string: "https://jsonplaceholder.typicode.com/posts")!)
+
+    static let dataService = MockDataService()
     static var previews: some View {
         DependencyInjectionBootCamp(dataService: dataService)
     }
